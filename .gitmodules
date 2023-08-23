@@ -1,0 +1,3 @@
+[submodule "projects/local-kind-cluster"]
+	path = projects/local-kind-cluster
+	url = https://github.com/elmazzun/local-kind-cluster
