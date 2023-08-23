@@ -25,6 +25,12 @@ Vagrant.configure("2") do |config|
     vb.customize ["setextradata", :id, "GUI\/LastGuestSizeHint", "1920,1080"]
   end
 
+  # Projects to mount in the VM?
+  folder_contents = Dir.entries("./projects").reject { |project| project == '.' || project == '..' }
+  folder_contents.each do |project|
+    config.vm.synced_folder "./projects/#{project}", "/home/vagrant/#{project}"
+  end
+
   config.vm.provision 'shell', path: './vm-scripts/provision.sh'
   config.vm.provision 'shell', reboot: true
 
