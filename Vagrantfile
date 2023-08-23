@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "kind-cluster-in-debian"
+    vb.name = "debian-12-box"
     vb.memory = 8192
     vb.cpus = 4
     vb.gui = true
@@ -28,7 +28,9 @@ Vagrant.configure("2") do |config|
   # Projects to mount in the VM?
   folder_contents = Dir.entries("./projects").reject { |project| project == '.' || project == '..' }
   folder_contents.each do |project|
-    config.vm.synced_folder "./projects/#{project}", "/home/vagrant/#{project}"
+    config.vm.synced_folder \
+      "./projects/#{project}", \
+      "/home/vagrant/#{project}"
   end
 
   config.vm.provision 'shell', path: './vm-scripts/provision.sh'
