@@ -1,3 +1,6 @@
 [submodule "projects/local-kind-cluster"]
 	path = projects/local-kind-cluster
 	url = https://github.com/elmazzun/local-kind-cluster
+[submodule "projects/node-operator"]
+	path = projects/node-operator
+	url = https://github.com/elmazzun/node-operator
