@@ -21,9 +21,18 @@ components:
 
 ## Working with the VM
 
-Ideally, this is how you would work while developing new eBPF programs:
+Create/turn on the VM with `vagrant up`.  
+Once up, you may access the VM by running `vagrant ssh` or by using VirtualBox 
+GUI, getting a shell and getting inside the VM by using default credentials, 
+which are `vagrant` username and `vagrant` password.
 
-- create/turn on the VM with `vagrant up`.  
-  Once up, you may access the VM by running `vagrant ssh` or by using VirtualBox 
-  GUI, getting a shell and getting inside the VM by using default credentials, 
-  which are `vagrant` username and `vagrant` password.
+Other repositories flow into this repository and are included here as git 
+submodules in the `projects` folder.
+
+At the moment the following repositories are here included:
+
+- [local-kind-cluster](https://github.com/elmazzun/local-kind-cluster): a 
+  Kubernetes in Docker (KinD) for testing Kubernetes workload
+
+- [node-operator](https://github.com/elmazzun/node-operator): a Kubernetes 
+  operator, tested against the KinD cluster
