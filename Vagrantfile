@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     vb.customize ["setextradata", :id, "GUI\/LastGuestSizeHint", "1920,1080"]
   end
 
-  # Projects to mount in the VM?
+  # Projects (Git submodules) to mount in the VM
   folder_contents = Dir.entries("./projects").reject { |project| project == '.' || project == '..' }
   folder_contents.each do |project|
     config.vm.synced_folder \
