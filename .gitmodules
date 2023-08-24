@@ -4,3 +4,6 @@
 [submodule "projects/node-operator"]
 	path = projects/node-operator
 	url = https://github.com/elmazzun/node-operator
+[submodule "projects/ebpf-lab"]
+	path = projects/ebpf-lab
+	url = https://github.com/elmazzun/ebpf-lab

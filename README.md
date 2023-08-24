@@ -36,3 +36,6 @@ At the moment the following repositories are here included:
 
 - [node-operator](https://github.com/elmazzun/node-operator): a Kubernetes 
   operator, tested against the KinD cluster
+
+- [ebpf-lab](https://github.com/elmazzun/ebpf-lab): a containerized eBPF build 
+  pipeline
